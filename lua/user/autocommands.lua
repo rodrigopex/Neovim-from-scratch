@@ -31,4 +31,3 @@ vim.cmd [[
   augroup end
 
 ]]
-
