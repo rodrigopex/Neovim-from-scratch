@@ -49,7 +49,6 @@ return packer.startup(function(use)
     use "kyazdani42/nvim-web-devicons"
     use "kyazdani42/nvim-tree.lua"
     use "akinsho/bufferline.nvim"
-    use "moll/vim-bbye"
     use {
         "nvim-lualine/lualine.nvim",
         options = { theme = 'powerline' }
@@ -77,7 +76,11 @@ return packer.startup(function(use)
             }
         end
     }
+    use {
+        'stevearc/aerial.nvim',
+    }
     use 'kazhala/close-buffers.nvim'
+    use 'simrat39/symbols-outline.nvim'
     use "akinsho/toggleterm.nvim"
     use "ahmedkhalf/project.nvim"
     use "lewis6991/impatient.nvim"
@@ -96,6 +99,8 @@ return packer.startup(function(use)
         end
     }
     -- use "indianboy42/hop-extensions"
+    use 'ThePrimeagen/harpoon'
+
     -- Colorschemes
     -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
     use "lunarvim/darkplus.nvim"
@@ -125,6 +130,7 @@ return packer.startup(function(use)
     -- Telescope
     use "nvim-telescope/telescope.nvim"
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    -- use { 'nvim-telescope/telescope-hop.nvim' }
     -- Treesitter
     use {
         "nvim-treesitter/nvim-treesitter",

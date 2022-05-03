@@ -80,15 +80,11 @@ local opts = {
 
 local mappings = {
     ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-    -- ["b"] = {
-    --   "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    --   "Buffers",
-    -- },
     ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
     ["w"] = { "<cmd>w!<CR>", "Save" },
     ["q"] = { "<cmd>q!<CR>", "Quit" },
-    -- ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
     ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+    ["<tab>"] = {"<cmd>:bprevious<CR>", "Switch to previous buffer"},
     f = {
         name = "File",
         f = {
@@ -105,7 +101,7 @@ local mappings = {
         name = "Buffers",
         d = { "<cmd>BDelete! this<CR>", "Close current buffer" },
         D = { "<cmd>BDelete! other<CR>", "Close other buffers" },
-        b = { "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Tel. open buffers" },
+        b = { "<cmd>Telescope buffers theme=ivy<cr>", "Tel. open buffers" },
     },
     p = {
         name = "Packer",
@@ -182,7 +178,8 @@ local mappings = {
         R = { "<cmd>Telescope registers<cr>", "Registers" },
         k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
         C = { "<cmd>Telescope commands<cr>", "Commands" },
-        t = { "<cmd>TodoTelescope<cr>", "Todo comments" },
+        t = { "<cmd>TodoTelescope theme=ivy<cr>", "Todo comments" },
+        m = { "<cmd>Telescope harpoon marks<cr>", "Todo comments" },
     },
 
     j = {
@@ -192,7 +189,7 @@ local mappings = {
         c = { "<cmd>HopChar1<cr>", "Jump to char" },
         C = { "<cmd>HopChar2<cr>", "Jump to char bigram (two keys)" },
         p = { "<cmd>HopPattern<cr>", "Jump to pattern" },
-        i = { "<cmd>lua require('hop-extension').definitions()<cr>", "Jump to definitions" },
+        i = { "<cmd>Telescope aerial theme=ivy<cr>", "Jump to definitions" },
     },
     i = {
         name = "Insert",
