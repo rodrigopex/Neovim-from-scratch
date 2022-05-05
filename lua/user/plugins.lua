@@ -49,6 +49,7 @@ return packer.startup(function(use)
     use "kyazdani42/nvim-web-devicons"
     use "kyazdani42/nvim-tree.lua"
     use "akinsho/bufferline.nvim"
+    use 'folke/tokyonight.nvim'
     use {
         "nvim-lualine/lualine.nvim",
         options = { theme = 'powerline' }
@@ -130,6 +131,11 @@ return packer.startup(function(use)
     -- Telescope
     use "nvim-telescope/telescope.nvim"
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    -- use { 'junegunn/fzf', run = './install --bin' }
+    -- use { 'ibhagwan/fzf-lua',
+    --     -- optional for icon support
+    --     requires = { 'kyazdani42/nvim-web-devicons' }
+    -- }
     -- use { 'nvim-telescope/telescope-hop.nvim' }
     -- Treesitter
     use {
