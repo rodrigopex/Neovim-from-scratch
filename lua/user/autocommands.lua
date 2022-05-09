@@ -30,6 +30,11 @@ vim.cmd [[
     autocmd BufWritePost *.rs Format
   augroup end
 
+  augroup inlay_hints
+    autocmd BufReadPost,BufEnter,InsertLeave *.rs silent!lua require('rust-tools.inlay_hints').set_inlay_hints()
+  augroup end
+
+
   augroup _auto_resize
     autocmd!
     autocmd VimResized * tabdo wincmd = 

@@ -51,6 +51,10 @@ return packer.startup(function(use)
     use "akinsho/bufferline.nvim"
     use 'folke/tokyonight.nvim'
     use {
+        "rcarriga/nvim-dap-ui",
+        requires = { "mfussenegger/nvim-dap" }
+    }
+    use {
         'gelguy/wilder.nvim',
         config = function()
             require('wilder').setup({
@@ -139,10 +143,12 @@ return packer.startup(function(use)
     use "williamboman/nvim-lsp-installer" -- simple to use language server installer
     use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
     use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+    use 'simrat39/rust-tools.nvim' -- use 'glepnir/lspsaga.nvim'
 
     -- Telescope
     use "nvim-telescope/telescope.nvim"
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use { 'nvim-telescope/telescope-ui-select.nvim' }
     -- use { 'junegunn/fzf', run = './install --bin' }
     -- use { 'ibhagwan/fzf-lua',
     --     -- optional for icon support
