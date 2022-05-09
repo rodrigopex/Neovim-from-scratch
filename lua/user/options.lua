@@ -32,7 +32,9 @@ local options = {
     wrap = false, -- display lines as one long line
     scrolloff = 8, -- is one of my fav
     sidescrolloff = 8,
-    guifont = "FiraCode NF:h10", -- the font used in graphical neovim applications
+    -- guifont = "JetBrains Mono NL:h11", -- the font used in graphical neovim applications
+    guifont = "Fira Code:h11", -- the font used in graphical neovim applications
+    -- guifont = "FiraCode Retina:h10", -- the font used in graphical neovim applications
 }
 
 vim.opt.shortmess:append "c"
