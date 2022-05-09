@@ -7,8 +7,6 @@ lspconfig.vimls.setup {
     on_attach = require("aerial").on_attach,
 }
 
-vim.cmd('autocmd BufWritePost * Format')
-
 require "user.lsp.lsp-installer"
 require("user.lsp.handlers").setup()
 -- require "user.lsp.null-ls"

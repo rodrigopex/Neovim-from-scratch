@@ -20,6 +20,16 @@ vim.cmd [[
     autocmd FileType markdown setlocal spell
   augroup end
 
+  augroup format 
+    autocmd!
+    autocmd BufWritePost *.c Format
+    autocmd BufWritePost *.py Format
+    autocmd BufWritePost *.cpp Format
+    autocmd BufWritePost *.h Format
+    autocmd BufWritePost *.hpp Format
+    autocmd BufWritePost *.rs Format
+  augroup end
+
   augroup _auto_resize
     autocmd!
     autocmd VimResized * tabdo wincmd = 

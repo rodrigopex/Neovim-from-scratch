@@ -51,6 +51,18 @@ return packer.startup(function(use)
     use "akinsho/bufferline.nvim"
     use 'folke/tokyonight.nvim'
     use {
+        'gelguy/wilder.nvim',
+        config = function()
+            require('wilder').setup({
+                modes = { ':', '/', '?' },
+                accept_key = "<Right>",
+                reject_key = "<Left>",
+                next_key = "<Tab>",
+                previous_key = "<S-Tab>",
+            })
+        end,
+    }
+    use {
         "nvim-lualine/lualine.nvim",
         options = { theme = 'powerline' }
     }
