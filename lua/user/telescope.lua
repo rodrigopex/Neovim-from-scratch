@@ -96,7 +96,7 @@ telescope.setup {
         ["ui-select"] = {
             require("telescope.themes").get_dropdown {
                 -- even more opts
-            } 
+            }
         },
         fzf = {
             fuzzy = true, -- false will only do exact matching
@@ -125,8 +125,22 @@ telescope.setup {
             -- jump to entry where hoop loop was started from
             reset_selection = true,
         },
+        repo = {
+            list = {
+                fd_opts = {
+                    "--no-ignore-vcs",
+                },
+                search_dirs = {
+                    "~/Cloud/Projects",
+                    "~/Projects",
+                    "~/Downloads",
+                },
+            },
+        },
     },
 }
-telescope.load_extension('harpoon')
+-- telescope.load_extension('harpoon')
 telescope.load_extension('aerial')
 telescope.load_extension("ui-select")
+telescope.load_extension("repo")
+-- telescope.load_extension("project")

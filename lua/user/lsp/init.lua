@@ -7,6 +7,10 @@ lspconfig.vimls.setup {
     on_attach = require("aerial").on_attach,
 }
 
+lspconfig.robotframework_ls.setup{
+
+}
+
 local on_attach = function(client)
     require 'completion'.on_attach(client)
 end

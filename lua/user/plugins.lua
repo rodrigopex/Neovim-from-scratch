@@ -116,7 +116,7 @@ return packer.startup(function(use)
         end
     }
     -- use "indianboy42/hop-extensions"
-    use 'ThePrimeagen/harpoon'
+    -- use 'ThePrimeagen/harpoon'
 
     -- Colorschemes
     -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -129,11 +129,6 @@ return packer.startup(function(use)
     use "hrsh7th/cmp-cmdline" -- cmdline completions
     use "saadparwaiz1/cmp_luasnip" -- snippet completions
     use "hrsh7th/cmp-nvim-lsp"
-    use { 'tzachar/cmp-tabnine',
-        run = './install.sh',
-        requires = 'hrsh7th/nvim-cmp'
-    }
-
     -- snippets
     use "L3MON4D3/LuaSnip" --snippet engine
     use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
@@ -149,6 +144,9 @@ return packer.startup(function(use)
     use "nvim-telescope/telescope.nvim"
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     use { 'nvim-telescope/telescope-ui-select.nvim' }
+    use 'cljoly/telescope-repo.nvim'
+    -- use { "nvim-telescope/telescope-file-browser.nvim" }
+    -- use { "nvim-telescope/telescope-project.nvim" }
     -- use { 'junegunn/fzf', run = './install --bin' }
     -- use { 'ibhagwan/fzf-lua',
     --     -- optional for icon support
