@@ -28,6 +28,7 @@ vim.cmd [[
     autocmd BufWritePost *.h Format
     autocmd BufWritePost *.hpp Format
     autocmd BufWritePost *.rs Format
+    autocmd BufWritePost *.robot Format
   augroup end
 
   augroup inlay_hints

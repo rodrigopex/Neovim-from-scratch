@@ -69,6 +69,7 @@ keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 keymap("n", "gR", "<cmd>Trouble lsp_references<CR>", opts)
+keymap("n", "gs", "<cmd>let c = expand(\"<cword>\")<CR><cmd>execute 'vimgrep /' . c . '/gj `git ls-files`' | copen <CR><cmd>execute 'cfdo %s/'.c.'/' . input(\"New name: \", c ) . '/gc'| cfdo update | cclose <CR>", opts)
 -- keymap("n", "<Leader>nf", ":lua require('neogen').generate()<CR>", opts)
 -- Terminal --
 -- Better terminal navigation
